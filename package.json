@@ -1,0 +1,27 @@
+{
+  "name": "menneu-md-notebook",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Ménneu Markdown Notebook - Edit markdown locally w/o installing any apps.",
+  "keywords": [
+    "markdown",
+    "md",
+    "html",
+    "barcode",
+    "QR",
+    "chart",
+    "UML",
+    "lisp",
+    "lsx",
+    "Ménneu",
+    "react",
+    "redagate",
+    "notebook"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shellyln/menneu-md-notebook.git"
+  },
+  "author": "shellyln",
+  "license": "ISC"
+}
