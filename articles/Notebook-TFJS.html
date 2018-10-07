@@ -1,0 +1,77 @@
+<!DOCTYPE html><head><meta charset="UTF-8">
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.0"></script>
+</head><body><script type="text/markdown">
+
+
+
+# JS Notebook
+
+
+## TensorFlow.js Getting Started
+
+[https://js.tensorflow.org/#getting-started](https://js.tensorflow.org/#getting-started)
+
+### #1 Linear regression
+
+%%%(Math """
+y = ax + b
+""")
+
+
+%%%(Notebook """Js@{(module "Tfjs01") (visualizer nil)}
+```javascript
+
+// Define a model for linear regression.
+const model = tf.sequential();
+model.add(tf.layers.dense({
+    units: 1,         // dimensionality of the output space.
+    inputShape: [1],  // dimension of the input.
+}));
+
+// Prepare the model for training: Specify the loss and the optimizer.
+model.compile({loss: 'meanSquaredError', optimizer: 'sgd'});
+
+// Generate some synthetic data for training.
+const xs = tf.tensor2d([1, 2, 3, 4], [4, 1]);    // Create a r4xc1 [[1],[2],[3],[4]] 2d tensor.
+const ys = tf.tensor2d([1, 3, 5, 7], [4, 1]);    // Create a r4xc1 [[1],[3],[5],[7]] 2d tensor.
+
+// Train the model using the data.
+//   train 'epochs' times...
+return model.fit(xs, ys, {epochs: 30}).then(() => {
+    // End training !
+    // Use the model to do inference on a data point the model hasn't seen before.
+    return (
+        model.predict(                           // Generates output predictions for the input samples.
+            tf.tensor2d([5, 6, 7, 8], [4, 1])    // Create a r4c1 [[5],[6],[7],[8]] 2d tensor.
+        ).data().then(a => {
+            // a is an object with string key "0", "1", ....
+            const r = [];
+            for (let i in a) {
+                if (a.hasOwnProperty(i)) {
+                    r[Number(i)] = a[i];
+                }
+            }
+            return r;
+        })
+    );
+});
+
+```
+""")
+
+
+
+
+
+
+### To view math formula in all browsers, load [MathJax](https://www.mathjax.org/) script file.
+
+%%%(script (@ (src "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML") (crossorigin "anonymous") (async)))
+
+
+
+
+</script>
+<script src="js/notebook.js"></script>
+<script src="js/menneu.min.js" onload="start({title: 'My Notebook 1'})"></script>
+</body>
