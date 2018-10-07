@@ -32,10 +32,39 @@ const start = (async (cf, data) => {
                         dom('code', null, this.props.module), dom('br')
                     ] : null,
                     dom('span', { style: { display: 'inline-block', width: '4em' } }, 'Result: '),
-                    dom('code', this.error ? { style: { backgroundColor: '#FF9999' } } : null, typeof this.result === 'object' ? JSON.stringify(this.result) : String(this.result)),
+                    dom('code', this.error ? { style: { backgroundColor: '#FF9999' } } : null,
+                        typeof this.result === 'object' ?
+                            (this.result instanceof Promise ? '(Promise)' : JSON.stringify(this.result)) :
+                            String(this.result)),
                 ),
                 dom(env.components.Facet, { dangerouslySetInnerHTML: { __html: '\n\n```' + (this.language || '') + '\n' + this.code + '\n```\n\n' } }),
             );
+        }
+        defer() {
+            if (this.result instanceof Promise) {
+                return new Promise(resolve => {
+                    this.result.then(v => {
+                        this.asyncResult = v;
+                        resolve();
+                    }).catch(e => {
+                        this.asyncResult = e;
+                        this.asyncError = true;
+                        resolve();
+                    });
+                });
+            } else {
+                return Promise.resolve();
+            }
+        }
+        render(ctx, children) {
+            if (this.result instanceof Promise) {
+                return `${children
+                    }<p>Async result: <code${
+                    this.asyncError ? ' style="background-color:#FF9999;"' : ''}>${
+                    env.RedAgateUtil.Escape.html(this.asyncResult)}</code></p>`;
+            } else {
+                return children;
+            }
         }
     }
 

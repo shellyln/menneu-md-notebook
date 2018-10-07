@@ -230,9 +230,37 @@ n! = prod_(k=1)^n k = n xx (n - 1) xx ... xx 3 xx 2 xx 1
 
 <p style="page-break-after: always;"></p>
 
-## Errors
+## Asynchronous results
 
 ### #9
+
+%%%(Notebook """Js@{(module "bar")}
+```javascript
+return new Promise(resolve => setTimeout(() => resolve('resolved'), 30));
+```
+""")
+
+
+
+
+
+### #10
+
+%%%(Notebook """Js@{(module "bar")}
+```javascript
+return new Promise((resolve, reject) => setTimeout(() => reject('rejected'), 30));
+```
+""")
+
+
+
+
+
+<p style="page-break-after: always;"></p>
+
+## Errors
+
+### #11
 
 %%%(Notebook """Js@{(module "boobar")}
 ```javascript
@@ -250,7 +278,7 @@ return x;
 
 
 
-### #10
+### #12
 
 %%%(Notebook """Lisp@{(module "boobaz")}
 ```lisp
