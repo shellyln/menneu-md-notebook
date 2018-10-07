@@ -47,7 +47,7 @@ const start = (async (cf, data) => {
                         this.asyncResult = v;
                         resolve();
                     }).catch(e => {
-                        this.asyncResult = e;
+                        this.asyncResult = String(e);
                         this.asyncError = true;
                         resolve();
                     });
@@ -57,14 +57,20 @@ const start = (async (cf, data) => {
             }
         }
         render(ctx, children) {
+            const isAsync = this.result instanceof Promise;
+            let vz = '';
+            if (!(isAsync ? this.asyncError : this.error ) && this.props.visualizer && typeof this.props.visualizer === 'function') {
+                const q = this.props.visualizer(isAsync ? this.asyncResult : this.result);
+                vz = env.RedAgate.renderAsHtml_noDefer(q);
+            }
             if (this.result instanceof Promise) {
                 return `${children
                     }<p>Async result: <code${
                     this.asyncError ? ' style="background-color:#FF9999;"' : ''}>${
                     env.RedAgateUtil.Escape.html(typeof this.asyncResult === 'object' ?
-                        JSON.stringify(this.asyncResult) : String(this.asyncResult))}</code></p>`;
+                        JSON.stringify(this.asyncResult) : String(this.asyncResult))}</code></p>${vz}`;
             } else {
-                return children;
+                return `${children}${vz}`;
             }
         }
     }
@@ -77,18 +83,11 @@ const start = (async (cf, data) => {
         markdownBodyStyle: 'font-family: "Yu Gothic Medium", YuGothic, meiryo, "Microsoft JhengHei", "Microsoft YaHei", "SimHei", helvetica, arial, sans-serif;',
 
         globals: {
-            // for Demo
-            '$now': () => (new Date).toLocaleDateString('en-US'),
-
             // for Notebook
             '$require': jsRequire,
 
-            // for Billing
-            '$to-locale-string': (...args) => args.slice(-1)[0].toLocaleString(...(args.slice(0, -1))),
-
             // for debug
             '$dir': (...args) => console.dir(...args),
-            'qwerty': 'asdfgh',
         },
 
         components: {
