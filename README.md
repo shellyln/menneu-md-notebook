@@ -28,6 +28,16 @@ Using [Ménneu](https://github.com/shellyln/menneu) document processor to render
 https://shellyln.github.io/menneu/playground.html
 
 
+## Use via CDN
+
+Replace `*.js` URLs in the `<script>` tags of `./articles/*.html` .
+
+https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/menneu.min.js
+https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/mkd%2Blsx.js
+https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/mkd.js
+https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/notebook.js
+
+
 ## Notes
 
 * To save the repository size, move `articles/js/menneu.min.js` and `articles/js/menneu.min.js.map` outside the repository.
