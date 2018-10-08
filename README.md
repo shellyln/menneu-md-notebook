@@ -64,7 +64,7 @@ https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/notebook
 * `Notebook-1.html`
 ```html
 <!DOCTYPE html><head><meta charset="UTF-8">
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.0"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.0"></script> -->
 </head><body><script type="text/markdown">
 
 # JS Notebook
