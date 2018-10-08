@@ -16,9 +16,9 @@ Using [Ménneu](https://github.com/shellyln/menneu) document processor to render
     ```
 1. Copy article template from `./articles/*.html` and open from the editor you like.
     * `Article-1.html` : Normal markdown format.
-    * `ScriptableArticle-1.html` : Markdown format that [LSX](https://github.com/shellyln/liyad#what-is-lsx) script expansion is enabled.
+    * `ScriptableArticle-1.html` : Markdown format that Lisp [LSX](https://github.com/shellyln/liyad#what-is-lsx) script expansion is enabled.
     * `Notebook-1.html` : JS Notebook markdown format.
-        * LSX script expansion is enabled.
+        * Lisp LSX script expansion is enabled.
 1. Preview the markdown by opening the browser.
 1. Save your contents and commit to the repository.
 
