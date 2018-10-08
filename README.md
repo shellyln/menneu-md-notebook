@@ -37,6 +37,44 @@ https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/mkd%2Bls
 https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/mkd.js  
 https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/notebook.js  
 
+* `Article-1.html`
+```html
+<!DOCTYPE html><head><meta charset="UTF-8"></head><body><script type="text/markdown">
+
+# Hello!
+
+</script>
+<script src="https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/mkd.js"></script>
+<script src="https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/menneu.min.js" onload="start({title: 'My Notebook 1'})"></script>
+</body>
+```
+
+* `ScriptableArticle-1.html`
+```html
+<!DOCTYPE html><head><meta charset="UTF-8"></head><body><script type="text/markdown">
+
+# Hello!
+
+</script>
+<script src="https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/mkd%2Blsx.js"></script>
+<script src="https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/menneu.min.js" onload="start({title: 'My Notebook 1'})"></script>
+</body>
+```
+
+* `Notebook-1.html`
+```html
+<!DOCTYPE html><head><meta charset="UTF-8">
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.0"></script>
+</head><body><script type="text/markdown">
+
+# JS Notebook
+
+%%%(script (@ (src "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML") (crossorigin "anonymous") (async)))
+</script>
+<script src="https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/notebook.js"></script>
+<script src="https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/menneu.min.js" onload="start({title: 'My Notebook 1'})"></script>
+</body>
+```
 
 ## Notes
 
