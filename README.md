@@ -82,6 +82,16 @@ https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/notebook
 * You should escape some characters if script expansion is enabled.  
   See [this document](https://github.com/shellyln/menneu/#lisp-block-expansion).
 
+## Gallery
+
+![notebook1](https://shellyln.github.io/menneu/assets/image/notebook1.png)
+
+![notebook1](https://shellyln.github.io/menneu/assets/image/notebook2.png)
+
+![notebook1](https://shellyln.github.io/menneu/assets/image/notebook3.png)
+
+![notebook1](https://shellyln.github.io/menneu/assets/image/notebook4.png)
+
 ----
 
 
