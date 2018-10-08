@@ -32,10 +32,10 @@ https://shellyln.github.io/menneu/playground.html
 
 Replace `*.js` URLs in the `<script>` tags of `./articles/*.html` .
 
-https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/menneu.min.js
-https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/mkd%2Blsx.js
-https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/mkd.js
-https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/notebook.js
+https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/menneu.min.js  
+https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/mkd%2Blsx.js  
+https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/mkd.js  
+https://cdn.rawgit.com/shellyln/menneu-md-notebook/5c634a30/articles/js/notebook.js  
 
 
 ## Notes
