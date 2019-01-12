@@ -32,10 +32,10 @@ https://shellyln.github.io/menneu/playground.html
 
 Replace `*.js` URLs in the `<script>` tags of `./articles/*.html` .
 
-https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.6/articles/js/menneu.min.js  
-https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.6/articles/js/mkd+lsx.js  
-https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.6/articles/js/mkd.js  
-https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.6/articles/js/notebook.js  
+https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.7/articles/js/menneu.min.js  
+https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.7/articles/js/mkd+lsx.js  
+https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.7/articles/js/mkd.js  
+https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.7/articles/js/notebook.js  
 
 * `Article-1.html`
 ```html
@@ -44,8 +44,8 @@ https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.6/articles/js/notebook.js
 # Hello!
 
 </script>
-<script src="https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.6/articles/js/mkd.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.6/articles/js/menneu.min.js" onload="start({title: 'My Notebook 1'})"></script>
+<script src="https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.7/articles/js/mkd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.7/articles/js/menneu.min.js" onload="start({title: 'My Notebook 1'})"></script>
 </body>
 ```
 
@@ -56,8 +56,8 @@ https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.6/articles/js/notebook.js
 # Hello!
 
 </script>
-<script src="https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.6/articles/js/mkd+lsx.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.6/articles/js/menneu.min.js" onload="start({title: 'My Notebook 1'})"></script>
+<script src="https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.7/articles/js/mkd+lsx.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.7/articles/js/menneu.min.js" onload="start({title: 'My Notebook 1'})"></script>
 </body>
 ```
 
@@ -71,8 +71,8 @@ https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.6/articles/js/notebook.js
 
 %%%(script (@ (src "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML") (crossorigin "anonymous") (async)))
 </script>
-<script src="https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.6/articles/js/notebook.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.6/articles/js/menneu.min.js" onload="start({title: 'My Notebook 1'})"></script>
+<script src="https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.7/articles/js/notebook.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/menneu-md-notebook@0.0.7/articles/js/menneu.min.js" onload="start({title: 'My Notebook 1'})"></script>
 </body>
 ```
 
